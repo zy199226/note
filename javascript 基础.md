@@ -26,3 +26,9 @@
 - Object 的键均为 Strings 类型，而 Map 里键可以是任意类型。WeakMap 对象也是键值对的集合，它的键必须是对象类型，且不可枚举(可以用来存放对象内的私密属性、方法)。WeakSet 对象是一组对象的集合，不重复不可枚举。
 
 - Set 相对于 Array 来说的优势有：（允许根据值删除元素，而数组中必须使用基于下标的 splice 方法）、（数组的 indexOf 方法无法找到 NaN 值）、（Set 对象存储不重复的值）。
+
+- Object 是一种引用类型，两个独立声明的对象永远也不会相等，即使属性相同。只有在比较一个对象和这个对象的引用时，都会返回为 true。
+
+## babel 转码
+
+- Babel 默认是不会对 Iterator、Generator、Promise、Map、Set 等全局对象，以及一些全局对象的方法（Object.assign）转码，如果需要就必须安装引入 babel-polyfill。
