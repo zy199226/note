@@ -29,6 +29,10 @@
 
 - Object 是一种引用类型，两个独立声明的对象永远也不会相等，即使属性相同。只有在比较一个对象和这个对象的引用时，都会返回为 true。
 
+- 可迭代对象中一定带有 Symbol.iterator 键的属性。String, Array, TypeArray, Map 和 Set 都内置可迭代对象，它们的原型对象都有一个 Symbol.iterator 方法。
+
+
+
 ## babel 转码
 
 - Babel 默认是不会对 Iterator、Generator、Promise、Map、Set 等全局对象，以及一些全局对象的方法（Object.assign）转码，如果需要就必须安装引入 babel-polyfill。
