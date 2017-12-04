@@ -23,7 +23,7 @@
 
 - arguments 对象提供一个 length 属性，但是不实现 forEach() 方法。
 
-- Object 的键均为 Strings 类型，而 Map 里键可以是任意类型。WeakMap 对象也是键值对的集合，它的键必须是对象类型，且不可枚举(可以用来存放对象内的私密属性、方法)。WeakSet 对象是一组对象的集合，不重复不可枚举。
+- Object 的键均为 Strings 类型，而 Map 里键可以是任意类型。WeakMap 对象也是键值对的集合，它的键必须是对象类型，且不可枚举，当对象被回收后，WeakMap 自动移除对应的键值对，及时释放内存。WeakSet 对象是一组对象的集合，不重复不可枚举。
 
 - Set 相对于 Array 来说的优势有：（允许根据值删除元素，而数组中必须使用基于下标的 splice 方法）、（数组的 indexOf 方法无法找到 NaN 值）、（Set 对象存储不重复的值）。
 
@@ -31,6 +31,7 @@
 
 - 可迭代对象中一定带有 Symbol.iterator 键的属性。String, Array, TypeArray, Map 和 Set 都内置可迭代对象，它们的原型对象都有一个 Symbol.iterator 方法。
 
+- 不再用到的内存，没有及时释放，就叫做内存泄漏（memory leak）。js 是通过引用次数来判断是否需要释放这块内存。
 
 
 ## babel 转码
