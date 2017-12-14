@@ -41,6 +41,13 @@
 
 - 严格模式下禁止 this 关键字指向全局对象。禁止在函数内部遍历调用栈。禁止删除变量，只有 configurable 设置为 true 的对象才能删除。不允许对 arguments 赋值，arguments 不再追踪参数的变化，禁止使用 arguments.callee。函数必须声明在顶层，不允许在非函数的代码块内声明函数。
 
+- null、undefined、0、""、NaN、false，等六个为假值.
+
 ## babel 转码
 
 - Babel 默认是不会对 Iterator、Generator、Promise、Map、Set 等全局对象，以及一些全局对象的方法（Object.assign）转码，如果需要就必须安装引入 babel-polyfill。
+
+
+## Object
+
+- Object 构造函数为给定值创建一个对象包装器，如果给定值是 null 或 undefined，将会创建并返回一个新对象，否则，将返回一个与给定值对应类型的对象。当以非构造函数形式调用时，Object 等同于 new Object()。
