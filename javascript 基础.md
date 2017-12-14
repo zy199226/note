@@ -43,6 +43,8 @@
 
 - null、undefined、0、""、NaN、false，等六个为假值.
 
+- in 运算符用来判断指定的属性是否在指定的对象或原型链中。可以用来判断数组的索引号是否存在、内置对象、自定义对象。
+
 ## babel 转码
 
 - Babel 默认是不会对 Iterator、Generator、Promise、Map、Set 等全局对象，以及一些全局对象的方法（Object.assign）转码，如果需要就必须安装引入 babel-polyfill。
